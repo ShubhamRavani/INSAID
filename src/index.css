@@ -1,13 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
 body {
+  font-family: var(--site-font);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --site-font: "Rubik", sans-serif;
+  --primary-color: #f53838;
+  --secondary-color: #ffffff;
+  --text-color-light: #4f5665;
+  --text-color-dark: #0b132a;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1152px;
+  width: 90%;
+}
+
+button {
+  font-family: var(--site-font);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.nvcontainer {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 0;
+}
+
+.container {
+  background: linear-gradient(
+    180deg,
+    #f8f8f8 -45.04%,
+    rgba(248, 248, 248, 0) 88.56%
+  );
+}
+
+.contactcontainer {
+  background: #f8f8f8;
+}
+
+.sub-heading {
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: var(--text-color-dark);
+  line-height: 50px;
+}
+
+.section-text {
+  max-width: 555px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn-light {
+  border-radius: 50px;
+  color: var(--primary-color);
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.btn-light:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-dark {
+  position: relative;
+  color: #fff;
+  border-radius: 10px;
+  background: var(--primary-color);
+  font-weight: bold;
+  transition-property: top, border, color, box-shadow, background-color;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  top: 0;
+}
+
+.btn-dark:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.body-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  display: none;
+}
+
+.body-overlay.show {
+  display: block;
+}
+
+.contactflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contactcontainer {
+    margin-top: 65px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-text {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .contactcontainer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 376px) {
+  .sub-heading {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .section-text {
+    padding: 0 20px;
+  }
 }
